@@ -2,19 +2,18 @@
   "manifest": {
     "publishingInformation": {
       "locales": {
-        "en-US": {
+        "en-GB": {
           "summary": "Sample Short Description",
           "examplePhrases": [
-            "Alexa open hello world",
-            "Alexa tell hello world hello",
-            "Alexa ask hello world say hello"
+            "Alexa open what to sow",
+            "Alexa ask what to sow what seeds I can plant now"
           ],
-          "name": "what-to-sow",
-          "description": "Sample Full Description"
+          "name": "What To Sow",
+          "description": "Find out what seeds you can plant at this time of year."
         }
       },
       "isAvailableWorldwide": true,
-      "testingInstructions": "Sample Testing Instructions.",
+      "testingInstructions": "Ask the skill what to sow right now. It should give you a list of vegetables and flowers to sow direct outdoors.",
       "category": "EDUCATION_AND_REFERENCE",
       "distributionCountries": []
     },
