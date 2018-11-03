@@ -3,7 +3,7 @@ configuration:
 ---
 - test: Launch request with no further information
 - LaunchRequest:
-    - response.outputSpeech.ssml: Here's what you should sow in November
+    - response.outputSpeech.ssml: "Here's what you can sow in November"
     - response.card.type: Simple
     - response.card.title: What To Sow
     - response.card.content: "*"

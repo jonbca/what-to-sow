@@ -6,6 +6,6 @@ module.exports.LaunchRequestHandler = {
   },
 
   handle({ responseBuilder }, response = buildResponse(responseBuilder)) {
-    return response("Here's what you should sow in November");
+    return response("Here's what you can sow in November");
   }
 };
