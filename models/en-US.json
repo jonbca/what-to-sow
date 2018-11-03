@@ -1,0 +1,46 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "what to sow now",
+      "types": [
+
+      ],
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": [
+
+          ]
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": [
+
+          ]
+        },
+        {
+          "name": "WhatToSowIntent",
+          "slots": [
+
+          ],
+          "samples": [
+            "what to sow now",
+            "what seeds to plant",
+            "what can I sow now",
+            "what seeds can I sow now",
+            "what can I plant now",
+            "what I can plant now",
+            "what seeds I can plant now",
+            "what seeds can I plant now"
+          ]
+        }
+      ]
+    }
+  }
+}
