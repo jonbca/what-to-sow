@@ -21,6 +21,8 @@
                     "slots": [],
                     "samples": [
                         "what to sow now",
+                        "what to sow",
+                        "what to plant",
                         "what seeds to plant",
                         "what can I sow now",
                         "what seeds can I sow now",
@@ -28,7 +30,12 @@
                         "what I can plant now",
                         "what seeds I can plant now",
                         "what seeds I can sow now",
-                        "what seeds can I plant now"
+                        "what seeds can I plant now",
+                        "planting advice",
+                        "what to grow",
+                        "for planting advice",
+                        "for seed advice",
+                        "for seeds"
                     ]
                 }
             ]
