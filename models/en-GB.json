@@ -1,7 +1,7 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "what to sow",
+            "invocationName": "seed advice",
             "types": [],
             "intents": [
                 {
@@ -20,6 +20,15 @@
                     "name": "WhatToSowIntent",
                     "slots": [],
                     "samples": [
+                        "tell me what I can plant now",
+                        "tell me what to plant now",
+                        "tell me what to sow now",
+                        "tell me what to sow",
+                        "tell me what to plant",
+                        "tell me what I can plant",
+                        "tell me what seeds to plant",
+                        "tell me what plants to plant",
+                        "tell me what seeds to plant",
                         "what to sow now",
                         "what to sow",
                         "what to plant",

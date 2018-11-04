@@ -13,6 +13,21 @@ describe("whether a launch request can be handled", () => {
     ).toBe(true);
   });
 
+  it("should handle the WhatToSowIntent", () => {
+    expect(
+      LaunchRequestHandler.canHandle({
+        requestEnvelope: {
+          request: {
+            type: "IntentRequest",
+            intent: {
+              name: "WhatToSowIntent"
+            }
+          }
+        }
+      })
+    ).toBe(true);
+  });
+
   it("should ignore a non-launch request", () => {
     expect(
       LaunchRequestHandler.canHandle({

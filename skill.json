@@ -5,10 +5,10 @@
                 "en-GB": {
                     "summary": "Sample Short Description",
                     "examplePhrases": [
-                        "Alexa open what to sow",
-                        "Alexa ask what to sow what seeds I can plant now"
+                        "Alexa open seed advice",
+                        "Alexa ask seed advice what seeds I can plant now"
                     ],
-                    "name": "What To Sow",
+                    "name": "Seed Advice",
                     "description": "Find out what seeds you can plant at this time of year."
                 }
             },

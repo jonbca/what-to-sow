@@ -1,6 +1,5 @@
 const Alexa = require("ask-sdk-core");
 const { LaunchRequestHandler } = require("./handlers/launch_request");
-const { WhatToSowIntentHandler } = require("./handlers/what_to_sow");
 
 const HelpIntentHandler = {
   canHandle(handlerInput) {
@@ -74,7 +73,6 @@ const skillBuilder = Alexa.SkillBuilders.custom();
 exports.handler = skillBuilder
   .addRequestHandlers(
     LaunchRequestHandler,
-    WhatToSowIntentHandler,
     HelpIntentHandler,
     CancelAndStopIntentHandler,
     SessionEndedRequestHandler
