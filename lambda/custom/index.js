@@ -1,5 +1,5 @@
 const Alexa = require("ask-sdk-core");
-const { LaunchRequestHandler } = require("./handlers/launch_request");
+const WhatToSowHandler = require("./handlers/what_to_sow");
 
 const HelpIntentHandler = {
   canHandle(handlerInput) {
@@ -9,12 +9,13 @@ const HelpIntentHandler = {
     );
   },
   handle(handlerInput) {
-    const speechText = "You can say hello to me!";
+    const speechText =
+      "You can ask me for seed sowing advice! I'll tell you what you can plant this time of year.";
 
     return handlerInput.responseBuilder
       .speak(speechText)
       .reprompt(speechText)
-      .withSimpleCard("Hello World", speechText)
+      .withSimpleCard("Seed Advice", speechText)
       .getResponse();
   }
 };
@@ -72,7 +73,7 @@ const skillBuilder = Alexa.SkillBuilders.custom();
 
 exports.handler = skillBuilder
   .addRequestHandlers(
-    LaunchRequestHandler,
+    new WhatToSowHandler(),
     HelpIntentHandler,
     CancelAndStopIntentHandler,
     SessionEndedRequestHandler

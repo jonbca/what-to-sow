@@ -1,9 +1,13 @@
-const { LaunchRequestHandler } = require("./launch_request");
+const WhatToSowHandler = require("./what_to_sow");
 
 describe("whether a launch request can be handled", () => {
+  beforeEach(() => {
+    this.whatToSowHandler = new WhatToSowHandler();
+  });
+
   it("should accept a request to handle a launch request", () => {
     expect(
-      LaunchRequestHandler.canHandle({
+      this.whatToSowHandler.canHandle({
         requestEnvelope: {
           request: {
             type: "LaunchRequest"
@@ -15,7 +19,7 @@ describe("whether a launch request can be handled", () => {
 
   it("should handle the WhatToSowIntent", () => {
     expect(
-      LaunchRequestHandler.canHandle({
+      this.whatToSowHandler.canHandle({
         requestEnvelope: {
           request: {
             type: "IntentRequest",
@@ -30,7 +34,7 @@ describe("whether a launch request can be handled", () => {
 
   it("should ignore a non-launch request", () => {
     expect(
-      LaunchRequestHandler.canHandle({
+      this.whatToSowHandler.canHandle({
         requestEnvelope: {
           request: {
             type: "SomethingElseRequest"
@@ -43,11 +47,12 @@ describe("whether a launch request can be handled", () => {
 
 describe("handling a launch request", () => {
   beforeEach(() => {
+    this.whatToSowHandler = new WhatToSowHandler();
     this.responseBuilder = jest.fn();
   });
 
   it("should speak a line about what you can currently sow", () => {
-    LaunchRequestHandler.handle({}, this.responseBuilder);
+    this.whatToSowHandler.handle({}, this.responseBuilder);
 
     expect(this.responseBuilder).toHaveBeenCalled();
   });
