@@ -1,6 +1,9 @@
-module.exports.buildResponse = responseBuilder => speechText => {
-  return responseBuilder
-    .speak(speechText)
-    .withSimpleCard("What To Sow", speechText)
-    .getResponse();
+module.exports = {
+  buildResponse(responseBuilder) {
+    return speechText =>
+      responseBuilder
+        .speak(speechText)
+        .withSimpleCard("Seed Advice", speechText)
+        .getResponse();
+  }
 };
