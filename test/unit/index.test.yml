@@ -7,3 +7,7 @@ configuration:
     - response.card.type: Simple
     - response.card.title: What To Sow
     - response.card.content: "*"
+---
+- test: What can I Sow
+- WhatToSowIntent:
+    - response.outputSpeech.ssml: "Here's what you can sow in November"

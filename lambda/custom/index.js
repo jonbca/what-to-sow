@@ -1,22 +1,6 @@
 const Alexa = require("ask-sdk-core");
 const { LaunchRequestHandler } = require("./handlers/launch_request");
-
-const WhatToSowIntentHandler = {
-  canHandle(handlerInput) {
-    return (
-      handlerInput.requestEnvelope.request.type === "IntentRequest" &&
-      handlerInput.requestEnvelope.request.intent.name === "WhatToSowIntent"
-    );
-  },
-  handle(handlerInput) {
-    const speechText = "Hello World!";
-
-    return handlerInput.responseBuilder
-      .speak(speechText)
-      .withSimpleCard("Hello World", speechText)
-      .getResponse();
-  }
-};
+const { WhatToSowIntentHandler } = require("./handlers/what_to_sow");
 
 const HelpIntentHandler = {
   canHandle(handlerInput) {
