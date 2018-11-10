@@ -1,5 +1,6 @@
 const Alexa = require("ask-sdk-core");
 const WhatToSowHandler = require("./handlers/what_to_sow");
+const Repository = require("./repository");
 
 const HelpIntentHandler = {
   canHandle(handlerInput) {
@@ -71,9 +72,13 @@ const ErrorHandler = {
 
 const skillBuilder = Alexa.SkillBuilders.custom();
 
+function getMonthKey(date = new Date()) {
+  return date.toLocaleString("en-gb", { month: "long" }).toLowerCase();
+}
+
 exports.handler = skillBuilder
   .addRequestHandlers(
-    new WhatToSowHandler(),
+    new WhatToSowHandler(new Repository(), getMonthKey()),
     HelpIntentHandler,
     CancelAndStopIntentHandler,
     SessionEndedRequestHandler

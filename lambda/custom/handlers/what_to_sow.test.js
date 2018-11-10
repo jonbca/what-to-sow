@@ -1,5 +1,11 @@
 const WhatToSowHandler = require("./what_to_sow");
 
+const repository = {
+  getSeedsFor() {
+    return ["peas", "broad beans"];
+  }
+};
+
 describe("whether a launch request can be handled", () => {
   beforeEach(() => {
     this.whatToSowHandler = new WhatToSowHandler();
@@ -47,7 +53,7 @@ describe("whether a launch request can be handled", () => {
 
 describe("handling a launch request", () => {
   beforeEach(() => {
-    this.whatToSowHandler = new WhatToSowHandler();
+    this.whatToSowHandler = new WhatToSowHandler(repository, "november");
     this.responseBuilder = jest.fn();
   });
 
@@ -55,5 +61,20 @@ describe("handling a launch request", () => {
     this.whatToSowHandler.handle({}, this.responseBuilder);
 
     expect(this.responseBuilder).toHaveBeenCalled();
+  });
+});
+
+describe("Handling intents with a month", () => {
+  beforeEach(() => {
+    this.whatToSowHandler = new WhatToSowHandler(repository, "november");
+  });
+
+  it("should fetch the items for november", () => {
+    const responseBuilder = jest.fn();
+    this.whatToSowHandler.handle({}, responseBuilder);
+
+    expect(responseBuilder).toHaveBeenCalledWith(
+      "Here's what you can sow in november: peas and broad beans."
+    );
   });
 });
