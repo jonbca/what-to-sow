@@ -1,22 +1,15 @@
 const YAML = require("yamljs");
 
-const months = [
-  "january",
-  "february",
-  "march",
-  "april",
-  "may",
-  "june",
-  "july",
-  "august",
-  "september",
-  "october",
-  "november",
-  "december"
-];
+class Repository {
+  constructor(file = "repository/seeds.yml") {
+    this.data = YAML.load(file);
+  }
 
-function loadYamlData(file = "repository/seeds.yml") {
-  return YAML.load(file);
+  getSeedsFor(month) {
+    return this.data.seeds
+      .filter(item => item.outdoors.months[month] !== undefined)
+      .map(item => item.name);
+  }
 }
 
-module.exports = { loadYamlData };
+module.exports = Repository;

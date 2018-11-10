@@ -1,9 +1,15 @@
-const repository = require("./index");
+const Repository = require("./index");
 
 describe("respository can get seeds for a given month", () => {
-  it("should get all the seeds for a month", () => {
-    const data = repository.loadYamlData();
+  beforeEach(() => {
+    this.repo = new Repository("repository/seeds.test.yml");
+  });
 
-    expect(data).toHaveProperty("seeds");
+  it("should load the YAML data", () => {
+    expect(this.repo.data).toHaveProperty("seeds");
+  });
+
+  it("should fetch seeds by month", () => {
+    expect(this.repo.getSeedsFor("november")).toContain("peas");
   });
 });
