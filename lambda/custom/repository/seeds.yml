@@ -3,21 +3,21 @@ seeds:
     description: "Some varieties of peas can be over-wintered outdoors. Look for ones that are marked for autumn planting."
     outdoors:
       months:
-        - october
-        - november
-        - december
-        - february
-        - march
-        - april
-        - may
-        - june
-        - july
+        october:
+        november:
+        december:
+        february:
+        march:
+        april:
+        may:
+        june:
+        july:
   - name: broad beans
     description: "Some broad beans are suitable for sowing outdoors in the winter."
     outdoors:
       months:
-        - november
-        - december
-        - january
-        - july
-        - august
+        november:
+        december:
+        january:
+        july:
+        august:

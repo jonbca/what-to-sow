@@ -3,14 +3,14 @@ configuration:
 ---
 - test: Launch request with no further information
 - LaunchRequest:
-    - response.outputSpeech.ssml: "Here's what you can sow in november: peas, and broad beans"
+    - response.outputSpeech.ssml: "Here's what you can sow in november: peas and broad beans."
     - response.card.type: Simple
     - response.card.title: Seed Advice
     - response.card.content: "*"
 ---
 - test: What can I Sow
 - WhatToSowIntent:
-    - response.outputSpeech.ssml: "Here's what you can sow in november: peas, and broad beans"
+    - response.outputSpeech.ssml: "Here's what you can sow in november: peas and broad beans."
     - response.card.type: Simple
     - response.card.title: Seed Advice
     - response.card.content: "*"

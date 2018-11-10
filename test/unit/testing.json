@@ -5,7 +5,7 @@
         "silent": false,
         "coveragePathIgnorePatterns": [
             "<rootDir>/lambda/data",
-            "<rootDir>/lambda/custom/.*cook.*"
+            "<rootDir>/lambda/custom/.*test.*"
         ]
     }
 }

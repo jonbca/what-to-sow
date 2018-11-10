@@ -1,7 +1,7 @@
 const YAML = require("yamljs");
 
 class Repository {
-  constructor(file = "repository/seeds.yml") {
+  constructor(file = `${__dirname}/seeds.yml`) {
     this.data = YAML.load(file);
   }
 
